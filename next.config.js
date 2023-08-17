@@ -1,20 +1,40 @@
-const withSass = require("@zeit/next-sass");
-const withLess = require("@zeit/next-less");
+const withLess = require('next-less');
 
-const isProd = process.env.NODE_ENV === "production";
-
-// fix: prevents error when .less files are required by node
-if (typeof require !== "undefined") {
-  require.extensions[".less"] = (file) => {};
-}
-
-module.exports = withLess(
-  withSass({
-    env: {
-      PUBLIC_URL: "",
-    },
-    lessLoaderOptions: {
+module.exports = withLess({
+  lessLoaderOptions: {
+    lessOptions: {
       javascriptEnabled: true,
     },
-  })
-);
+  },
+  webpack: (config, { isServer }) => {
+    if (!isServer) {
+      config.module.rules.push({
+        test: /\.(woff|woff2|eot|ttf|otf)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'fonts/',
+            },
+          },
+        ],
+      });
+
+      config.module.rules.push({
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              outputPath: 'images/',
+            },
+          },
+        ],
+      });
+    }
+    return config;
+  },
+  env: {
+    PUBLIC_URL: '',
+  },
+});
