@@ -2,7 +2,7 @@
 FROM node:18
 
 # Set the working directory inside the container
-WORKDIR /usr/src/app
+WORKDIR /app
 
 # Copy package.json and package-lock.json to the container
 COPY package*.json ./
@@ -18,6 +18,7 @@ RUN npm install
 COPY . .
 
 RUN npm run build
+
 
 # Expose the port your app will listen on
 EXPOSE 3000
