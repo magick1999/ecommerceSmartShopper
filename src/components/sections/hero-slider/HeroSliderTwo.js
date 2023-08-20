@@ -28,9 +28,9 @@ function HeroSliderTwo({ containerFluid, data }) {
                   </h3>
                   <Button type="primary" shape="round">
                     <Link href={process.env.PUBLIC_URL + "/shop/shop-3-column"}>
-                      <a href={process.env.PUBLIC_URL + "/shop/shop-3-column"}>
+                      
                         Shop now
-                      </a>
+                      
                     </Link>
                   </Button>
                 </div>
@@ -54,19 +54,16 @@ function HeroSliderTwo({ containerFluid, data }) {
             {Array.from(Array(3), (e, i) => {
               return (
                 <Col key={i} sm={8} md={12} lg={8}>
-                  <Link href={process.env.PUBLIC_URL + "/shop/shop-3-column"}>
-                    <a
-                      href={process.env.PUBLIC_URL + "/shop/shop-3-column"}
-                      className="zoom-in"
-                    >
-                      <img
-                        src={
-                          process.env.PUBLIC_URL +
-                          `/assets/images/hero-slider/two/${i + 1}.png`
-                        }
-                        alt="Hero slider sub item"
-                      />
-                    </a>
+                  <Link href={process.env.PUBLIC_URL + "/shop/shop-3-column"} className="zoom-in">
+
+                    <img
+                      src={
+                        process.env.PUBLIC_URL +
+                        `/assets/images/hero-slider/two/${i + 1}.png`
+                      }
+                      alt="Hero slider sub item"
+                    />
+
                   </Link>
                 </Col>
               );

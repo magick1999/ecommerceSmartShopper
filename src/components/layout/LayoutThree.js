@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { BackTop } from "antd";
+import { FloatButton } from "antd";
 
 import HeaderThree from "../header/HeaderThree";
 import withHeaderScroll from "../../common/withHeaderScroll";
@@ -10,15 +10,15 @@ const ScrolledHeader = withHeaderScroll(HeaderThree);
 
 function LayoutOne({ title, children, headerClass, footerClass }) {
   return (
-    <>
+    <React.Fragment>
       <Head>
         <title>{title}</title>
       </Head>
       <ScrolledHeader className={headerClass} />
       {children}
       <Footer className={footerClass} />
-      <BackTop />
-    </>
+      <FloatButton.BackTop />
+    </React.Fragment>
   );
 }
 

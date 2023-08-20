@@ -74,7 +74,7 @@ const login = () => {
                     </Button>
                     <Button type="link">
                       <Link href={process.env.PUBLIC_URL + "/auth/register"}>
-                        <a>OR CREATE AN ACCOUNT</a>
+                        OR CREATE AN ACCOUNT
                       </Link>
                     </Button>
                   </Form.Item>

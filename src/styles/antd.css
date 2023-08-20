@@ -1,14 +1,29 @@
-//Overide antdesign default style
-@import "~antd/dist/antd.less";
+:root {
+  --primary-color: #88c74a;
+  --font-family: "CeraPro Regular", sans-serif;
+  --font-size-base: 16px;
+  --text-selection-bg: pink;
+  --rate-star-color: #efb11c;
+  --rate-star-size: 14px;
+  --zindex-tooltip: 99;
+  --form-item-margin-bottom: 30px;
+  --green-color: #88c74a;
+}
 
-@primary-color: #88c74a;
-@font-family: "CeraPro Regular", sans-serif;
-@font-size-base: 16px;
-@text-selection-bg: pink;
-@rate-star-color: #efb11c;
-@rate-star-size: 14px;
-@zindex-tooltip: 99;
-@form-item-margin-bottom: 30px;
+:where(.css-17a39f8).ant-collapse-borderless >.ant-collapse-item>.ant-collapse-content {
+  border-top: 0;
+}
+
+:where(.css-17a39f8).ant-collapse>.ant-collapse-item >.ant-collapse-header .ant-collapse-expand-icon {
+  height: 22px;
+  margin-inline-start: 4px;
+  display: block;
+}
+
+a, a:link, a:visited, a:focus, a:hover, a:active{
+  text-decoration:none;
+  cursor: pointer;
+}
 
 .ant-select-focused .ant-select-selector,
 .ant-select-selector:focus,
@@ -81,7 +96,7 @@ input:focus {
 }
 
 .ant-breadcrumb {
-  margin-bottom: 30/16em;
+  margin-bottom: calc(30 / 16);
 }
 
 .ant-breadcrumb .ant-breadcrumb-link {

@@ -70,10 +70,11 @@ function compare() {
                         <Link
                           href={process.env.PUBLIC_URL + `/product/[slug]`}
                           as={process.env.PUBLIC_URL + `/product/${item.slug}`}
-                        >
-                          <a className="product-name" title="Pure Pineapple">
-                            {item.name}
-                          </a>
+                          className="product-name"
+                          title="Pure Pineapple">
+
+                          {item.name}
+
                         </Link>
                       </td>
                     ))}

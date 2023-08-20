@@ -16,7 +16,7 @@ const CustomForm = React.memo(({ status, message, onValidated }) => {
   };
 
   return (
-    <>
+    <React.Fragment>
       <Form
         name="basic"
         onFinish={onFinish}
@@ -58,7 +58,7 @@ const CustomForm = React.memo(({ status, message, onValidated }) => {
           dangerouslySetInnerHTML={{ __html: message }}
         />
       )}
-    </>
+    </React.Fragment>
   );
 });
 

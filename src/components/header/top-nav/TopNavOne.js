@@ -54,10 +54,8 @@ export default function TopNavOne({ containerFluid }) {
             </div>
             <div className="top-nav-one-right__item">
               <Link href={process.env.PUBLIC_URL + "/auth/login"}>
-                <a>
-                  <i className="fas fa-user" />
-                  Login
-                </a>
+
+                <i className="fas fa-user" />Login
               </Link>
             </div>
           </div>

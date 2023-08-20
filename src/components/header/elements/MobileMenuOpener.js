@@ -12,7 +12,7 @@ function MobileMenuOpener() {
     setVisible(false);
   };
   return (
-    <>
+    <React.Fragment>
       <a onClick={onShowDrawer} className="menu-mobile-opener" href="#">
         <i className="fas fa-bars" />
       </a>
@@ -21,13 +21,13 @@ function MobileMenuOpener() {
         placement="right"
         closable={true}
         onClose={onCloseDrawer}
-        visible={visible}
+        open={visible}
         placement="left"
         width={320}
       >
         <MobileNavigator />
       </Drawer>
-    </>
+    </React.Fragment>
   );
 }
 

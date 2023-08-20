@@ -86,7 +86,7 @@ function HeroSliderOne({ data }) {
                         <Link
                           href={process.env.PUBLIC_URL + "/shop/shop-3-column"}
                         >
-                          <a>Shop now</a>
+                          Shop now
                         </Link>
                       </Button>
                     </div>

@@ -111,20 +111,21 @@ function Product({ data, className, type, countdownLast = 100000000 }) {
               <Link
                 href={process.env.PUBLIC_URL + `/product/[slug]`}
                 as={process.env.PUBLIC_URL + `/product/${data.slug}`}
-              >
-                <a title={data.name}>
-                  <img src={data.coverImage} alt="Product image" />
-                </a>
+                title={data.name}>
+
+                <img src={data.coverImage} alt="Product image" />
+
               </Link>
             </div>
             <div className="product-tiny-content">
               <Link
                 href={process.env.PUBLIC_URL + `/product/[slug]`}
                 as={process.env.PUBLIC_URL + `/product/${data.slug}`}
-              >
-                <a className="product-tiny-name" title="Pure Pineapple">
-                  {data.name}
-                </a>
+                className="product-tiny-name"
+                title="Pure Pineapple">
+
+                {data.name}
+
               </Link>
               <h3 className="product-tiny-price">
                 {data.discount
@@ -142,10 +143,10 @@ function Product({ data, className, type, countdownLast = 100000000 }) {
               <Link
                 href={process.env.PUBLIC_URL + `/product/[slug]`}
                 as={process.env.PUBLIC_URL + `/product/${data.slug}`}
-              >
-                <a title={data.name}>
-                  <img src={data.coverImage} alt="Product image" />
-                </a>
+                title={data.name}>
+
+                <img src={data.coverImage} alt="Product image" />
+
               </Link>
             </div>
 
@@ -176,10 +177,11 @@ function Product({ data, className, type, countdownLast = 100000000 }) {
               <Link
                 href={process.env.PUBLIC_URL + `/product/[slug]`}
                 as={process.env.PUBLIC_URL + `/product/${data.slug}`}
-              >
-                <a className="product-dale-name" title="Pure Pineapple">
-                  {data.name}
-                </a>
+                className="product-dale-name"
+                title="Pure Pineapple">
+
+                {data.name}
+
               </Link>
               <h3 className="product-dale-price">
                 {data.discount
@@ -251,10 +253,10 @@ function Product({ data, className, type, countdownLast = 100000000 }) {
               <Link
                 href={process.env.PUBLIC_URL + `/product/[slug]`}
                 as={process.env.PUBLIC_URL + `/product/${data.slug}`}
-              >
-                <a title={data.name}>
-                  <img src={data.coverImage} alt="Product image" />
-                </a>
+                title={data.name}>
+
+                <img src={data.coverImage} alt="Product image" />
+
               </Link>
               <Button type="primary" onClick={showModal}>
                 Quick view
@@ -265,10 +267,11 @@ function Product({ data, className, type, countdownLast = 100000000 }) {
               <Link
                 href={process.env.PUBLIC_URL + `/product/[slug]`}
                 as={process.env.PUBLIC_URL + `/product/${data.slug}`}
-              >
-                <a className="product-name" title="Pure Pineapple">
-                  {data.name}
-                </a>
+                className="product-name"
+                title="Pure Pineapple">
+
+                {data.name}
+
               </Link>
               <Rate
                 className="product-rate"
@@ -331,10 +334,10 @@ function Product({ data, className, type, countdownLast = 100000000 }) {
               <Link
                 href={process.env.PUBLIC_URL + `/product/[slug]`}
                 as={process.env.PUBLIC_URL + `/product/${data.slug}`}
-              >
-                <a title={data.name}>
-                  <img src={data.coverImage} alt="Product image" />
-                </a>
+                title={data.name}>
+
+                <img src={data.coverImage} alt="Product image" />
+
               </Link>
             </div>
             <div className="product-content">
@@ -342,10 +345,11 @@ function Product({ data, className, type, countdownLast = 100000000 }) {
               <Link
                 href={process.env.PUBLIC_URL + `/product/[slug]`}
                 as={process.env.PUBLIC_URL + `/product/${data.slug}`}
-              >
-                <a className="product-name" title="Pure Pineapple">
-                  {data.name}
-                </a>
+                className="product-name"
+                title="Pure Pineapple">
+
+                {data.name}
+
               </Link>
               <h3 className="product-price">
                 {data.discount
@@ -413,10 +417,10 @@ function Product({ data, className, type, countdownLast = 100000000 }) {
     }
   };
   return (
-    <>
+    (<React.Fragment>
       {rederProductType(type)}
       <Modal
-        visible={modalVisible}
+        open={modalVisible}
         onCancel={onModalClose}
         footer={null}
         header={null}
@@ -424,7 +428,7 @@ function Product({ data, className, type, countdownLast = 100000000 }) {
       >
         <ProductDetailLayout style={{ marginBottom: 0 }} hideTab data={data} />
       </Modal>
-    </>
+    </React.Fragment>)
   );
 }
 

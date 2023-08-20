@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-
+import React from "react";
 import * as shopActions from "../redux/actions/shopActions";
 import LayoutOne from "../components/layout/LayoutOne";
 import HeroSliderOne from "../components/sections/hero-slider/HeroSliderOne";

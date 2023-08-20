@@ -14,22 +14,24 @@ function Navigator() {
   return (
     <ul className="navigation">
       <li className="navigation-item -toggleable">
-        <Link href={navigatorData.HOME.href}>
-          <a className="navigation-item__title">{navigatorData.HOME.title}</a>
+        <Link href={navigatorData.HOME.href} className="navigation-item__title">
+          {navigatorData.HOME.title}
         </Link>
         <ul className="navigation-item__submenu">
           {navigatorData.HOME.subMenu.map((item, index) => (
             <li key={index}>
               <Link href={process.env.PUBLIC_URL + item.href}>
-                <a>{item.title}</a>
+                {item.title}
               </Link>
             </li>
           ))}
         </ul>
       </li>
       <li className="navigation-item -toggleable">
-        <Link href={process.env.PUBLIC_URL + navigatorData.SHOP.href}>
-          <a className="navigation-item__title">{navigatorData.SHOP.title}</a>
+        <Link
+          href={process.env.PUBLIC_URL + navigatorData.SHOP.href}
+          className="navigation-item__title">
+          {navigatorData.SHOP.title}
         </Link>
         <ul className="navigation-item__submenu -wide">
           <div className="navigation-item__submenu-group">
@@ -37,7 +39,7 @@ function Navigator() {
             {navigatorData.SHOP.subMenu.layout.map((item, index) => (
               <li key={index}>
                 <Link href={process.env.PUBLIC_URL + item.href}>
-                  <a>{item.title}</a>
+                  {item.title}
                 </Link>
               </li>
             ))}
@@ -47,7 +49,7 @@ function Navigator() {
             {navigatorData.SHOP.subMenu.detail.map((item, index) => (
               <li key={index}>
                 <Link href={process.env.PUBLIC_URL + item.href}>
-                  <a>{item.title}</a>
+                  {item.title}
                 </Link>
               </li>
             ))}
@@ -57,7 +59,7 @@ function Navigator() {
             {navigatorData.SHOP.subMenu.pages.map((item, index) => (
               <li key={index}>
                 <Link href={process.env.PUBLIC_URL + item.href}>
-                  <a>{item.title}</a>
+                  {item.title}
                 </Link>
               </li>
             ))}
@@ -65,36 +67,42 @@ function Navigator() {
         </ul>
       </li>
       <li className="navigation-item -toggleable">
-        <Link href={process.env.PUBLIC_URL + navigatorData.BLOG.href}>
-          <a className="navigation-item__title">{navigatorData.BLOG.title}</a>
+        <Link
+          href={process.env.PUBLIC_URL + navigatorData.BLOG.href}
+          className="navigation-item__title">
+          {navigatorData.BLOG.title}
         </Link>
         <ul className="navigation-item__submenu">
           {navigatorData.BLOG.subMenu.map((item, index) => (
             <li key={index}>
               <Link href={process.env.PUBLIC_URL + item.href}>
-                <a>{item.title}</a>
+                {item.title}
               </Link>
             </li>
           ))}
         </ul>
       </li>
       <li className="navigation-item -toggleable">
-        <Link href={process.env.PUBLIC_URL + navigatorData.PAGES.href}>
-          <a className="navigation-item__title">{navigatorData.PAGES.title}</a>
+        <Link
+          href={process.env.PUBLIC_URL + navigatorData.PAGES.href}
+          className="navigation-item__title">
+          {navigatorData.PAGES.title}
         </Link>
         <ul className="navigation-item__submenu">
           {navigatorData.PAGES.subMenu.map((item, index) => (
             <li key={index}>
               <Link href={process.env.PUBLIC_URL + item.href}>
-                <a>{item.title}</a>
+                {item.title}
               </Link>
             </li>
           ))}
         </ul>
       </li>
       <li className="navigation-item">
-        <Link href={process.env.PUBLIC_URL + navigatorData.ABOUT.href}>
-          <a className="navigation-item__title">{navigatorData.ABOUT.title}</a>
+        <Link
+          href={process.env.PUBLIC_URL + navigatorData.ABOUT.href}
+          className="navigation-item__title">
+          {navigatorData.ABOUT.title}
         </Link>
       </li>
     </ul>

@@ -10,24 +10,27 @@ function FunctionItems({ hideTotal, hideWishlist }) {
   return (
     <div className="function-items">
       {!hideWishlist && (
-        <Link href={process.env.PUBLIC_URL + "/shop/wishlist"}>
-          <a className="function-items-item">
-            <i className="icon_heart_alt" />
-          </a>
-        </Link>
+        (<Link
+          href={process.env.PUBLIC_URL + "/shop/wishlist"}
+          className="function-items-item">
+
+          <i className="icon_heart_alt" />
+
+        </Link>)
       )}
 
-      <Link href={process.env.PUBLIC_URL + "/shop/cart"}>
-        <a className="function-items-item">
-          <i className="icon_bag_alt" />
+      <Link
+        href={process.env.PUBLIC_URL + "/shop/cart"}
+        className="function-items-item">
 
-          {!hideTotal &&
-            (cartState.data ? (
-              <span>{formatCurrency(calculateTotalPrice(cartState.data))}</span>
-            ) : (
-              <span>{formatCurrency(0)}</span>
-            ))}
-        </a>
+        <i className="icon_bag_alt" />
+        {!hideTotal &&
+          (cartState.data ? (
+            <span>{formatCurrency(calculateTotalPrice(cartState.data))}</span>
+          ) : (
+            <span>{formatCurrency(0)}</span>
+          ))}
+
       </Link>
     </div>
   );

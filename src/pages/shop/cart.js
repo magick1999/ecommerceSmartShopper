@@ -66,7 +66,7 @@ function cart() {
     console.log("Failed:", errorInfo);
   };
   return (
-    <LayoutOne title="Shopping Cart">
+    (<LayoutOne title="Shopping Cart">
       <Container>
         <Breadcrumb separator=">">
           <Breadcrumb.Item>
@@ -183,7 +183,7 @@ function cart() {
                 </div>
                 <Button className="cart-footer__update" type="primary">
                   <Link href={process.env.PUBLIC_URL + "/shop/shop-3-column"}>
-                    <a>Update cart</a>
+                    Update cart
                   </Link>
                 </Button>
               </div>
@@ -215,13 +215,13 @@ function cart() {
                 <div className="cart-total__checkout">
                   <Button type="primary" shape="round">
                     <Link href={process.env.PUBLIC_URL + "/shop/checkout"}>
-                      <a>Proceed to Checkout</a>
+                      Proceed to Checkout
                     </Link>
                   </Button>
                   <span>-</span>
                   <Button type="link">
                     <Link href={process.env.PUBLIC_URL + "#"}>
-                      <a>Check out with PayPal</a>
+                      Check out with PayPal
                     </Link>
                   </Button>
                 </div>
@@ -231,15 +231,14 @@ function cart() {
         />
         <PartnerOne />
       </Container>
-
       <Modal
-        visible={modalState.visible}
+        open={modalState.visible}
         onOk={handleOk}
         onCancel={handleCancel}
       >
         <p>{modalState.message}</p>
       </Modal>
-    </LayoutOne>
+    </LayoutOne>)
   );
 }
 

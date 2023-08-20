@@ -27,7 +27,7 @@ function CategoryColappse({ active }) {
         expandIcon={({ isActive }) => (
           <DownOutlined rotate={isActive ? -180 : 0} />
         )}
-        expandIconPosition="right"
+        expandIconPosition="end"
       >
         <Panel
           header="All departments"
@@ -38,7 +38,7 @@ function CategoryColappse({ active }) {
             {categories.map((item, index) => (
               <li key={index}>
                 <Link href={process.env.PUBLIC_URL + item.href}>
-                  <a>{item.name}</a>
+                  {item.name}
                 </Link>
               </li>
             ))}

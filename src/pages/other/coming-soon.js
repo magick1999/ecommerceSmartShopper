@@ -8,7 +8,7 @@ import SocialIcons from "../../components/other/SocialIcons";
 
 export default function comingSoon() {
   return (
-    <>
+    <React.Fragment>
       <Head>
         <title>Coming soon</title>
       </Head>
@@ -46,6 +46,6 @@ export default function comingSoon() {
           </Container>
         </div>
       </div>
-    </>
+    </React.Fragment>
   );
 }

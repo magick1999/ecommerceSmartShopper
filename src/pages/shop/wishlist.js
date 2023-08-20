@@ -70,7 +70,7 @@ function wishlist() {
   };
 
   return (
-    <LayoutOne title="Wishlist">
+    (<LayoutOne title="Wishlist">
       <Container>
         <Breadcrumb separator=">">
           <Breadcrumb.Item>
@@ -162,7 +162,7 @@ function wishlist() {
               </div>
               <Button className="wishlist-btn" type="primary" shape="round">
                 <Link href={process.env.PUBLIC_URL + "/shop/shop-3-column"}>
-                  <a>Continue shopping</a>
+                  Continue shopping
                 </Link>
               </Button>
             </div>
@@ -171,13 +171,13 @@ function wishlist() {
         <PartnerOne />
       </Container>
       <Modal
-        visible={modalState.visible}
+        open={modalState.visible}
         onOk={handleOk}
         onCancel={handleCancel}
       >
         <p>{modalState.message}</p>
       </Modal>
-    </LayoutOne>
+    </LayoutOne>)
   );
 }
 

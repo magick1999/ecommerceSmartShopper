@@ -56,7 +56,7 @@
   margin-bottom: $section-spacing;
   &-wrapper {
     background: {
-      image: url("../../../public/assets/images/sections/introduction/two/bg.png");
+      image: url("../../public/assets/images/sections/introduction/two/bg2.png");
       size: cover;
       position: center;
     }
@@ -86,7 +86,7 @@
 
 .introduction-three {
   background: {
-    image: url("../../../public/assets/images/sections/introduction/three/bg.png");
+    image: url("../../public/assets/images/sections/introduction/three/bg3.png");
     position: center;
     size: cover;
     attachment: fixed;
@@ -106,7 +106,7 @@
             content: "";
             display: inline-block;
             background: {
-              image: url("../../../public/assets/images/sections/introduction/three/arrow.png");
+              image: url("../../public/assets/images/sections/introduction/three/arrow.png");
               repeat: no-repeat;
             }
             width: emCal(16, 190);
@@ -165,7 +165,7 @@
 
 .introduction-four {
   background: {
-    image: url("../../../public/assets/images/sections/introduction/four/bg.png");
+    image: url("../../public/assets/images/sections/introduction/four/bg4.png");
     position: center;
     size: cover;
     attachment: fixed;
@@ -198,7 +198,7 @@
   margin-bottom: $section-spacing;
   padding-top: emCal(16, 50);
   background: {
-    image: url("../../../public/assets/images/sections/introduction/five/bg.png");
+    image: url("../../public/assets/images/sections/introduction/five/bg5.png");
     size: cover;
     text-align: center;
   }

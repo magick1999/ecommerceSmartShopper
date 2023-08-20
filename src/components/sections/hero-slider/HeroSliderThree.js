@@ -35,13 +35,9 @@ function HeroSliderThree({ data }) {
                         <Link
                           href={process.env.PUBLIC_URL + "/shop/shop-3-column"}
                         >
-                          <a
-                            href={
-                              process.env.PUBLIC_URL + "/shop/shop-3-column"
-                            }
-                          >
+                          
                             Shop now
-                          </a>
+                          
                         </Link>
                       </Button>
                     </div>

@@ -28,7 +28,7 @@ export default function error() {
                 </p>
                 <Button type="primary" shape="round">
                   <Link href={process.env.PUBLIC_URL + "/"}>
-                    <a>Go to homepage</a>
+                    Go to homepage
                   </Link>
                 </Button>
               </div>

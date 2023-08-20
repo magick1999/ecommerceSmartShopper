@@ -1,6 +1,6 @@
 import React from "react";
 import Head from "next/head";
-import { BackTop } from "antd";
+import { FloatButton } from "antd";
 
 import HeaderTwo from "../header/HeaderTwo";
 import withHeaderScroll from "../../common/withHeaderScroll";
@@ -17,7 +17,7 @@ function LayoutOne({ title, children }) {
       <ScrolledHeader />
       {children}
       <FooterFluid />
-      <BackTop />
+      <FloatButton.BackTop />
     </>
   );
 }

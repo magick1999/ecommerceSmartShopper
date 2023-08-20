@@ -11,21 +11,20 @@ function CategoriesOne({ data }) {
           {data && data.length > 0 ? (
             data.map((item, index) => (
               <Col key={index} xs={24} sm={12} md={6}>
-                <Link href={process.env.PUBLIC_URL + "/shop/shop-3-column"}>
-                  <a
-                    href={process.env.PUBLIC_URL + "/shop/shop-3-column"}
-                    className="categories-one-item"
-                  >
-                    <div className="categories-one-item__image up-down-anim-hover">
-                      <span>{item.image.background}</span>
-                      <img
-                        src={process.env.PUBLIC_URL + item.image.main}
-                        alt="Category image"
-                      />
-                    </div>
-                    <h2>{item.title}</h2>
-                    <p>{item.quantity} Items</p>
-                  </a>
+                <Link
+                  href={process.env.PUBLIC_URL + "/shop/shop-3-column"}
+                  className="categories-one-item">
+
+                  <div className="categories-one-item__image up-down-anim-hover">
+                    <span>{item.image.background}</span>
+                    <img
+                      src={process.env.PUBLIC_URL + item.image.main}
+                      alt="Category image"
+                    />
+                  </div>
+                  <h2>{item.title}</h2>
+                  <p>{item.quantity} Items</p>
+
                 </Link>
               </Col>
             ))
